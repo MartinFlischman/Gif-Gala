@@ -1,0 +1,57 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ffcc00;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+.description {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.rsvp-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+}
+
+form {
+    display: grid;
+    grid-gap: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+button {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#confirmationMessage {
+    display: none;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #5cb85c;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.hidden {
+    display: none;
+}
