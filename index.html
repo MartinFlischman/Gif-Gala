@@ -2,47 +2,48 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
-    <title>GIF Gala RSVP</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GIF Gala RSVP</title>
+  <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+  <script src="script.js" defer></script> <!-- Link to your JavaScript file -->
 </head>
 
 <body>
+  <header>
+    <h1>You're Invited to the GIF Gala: Where Memes Come to Life!</h1>
+  </header>
 
-    <header>
-        <h1>You're Invited to the GIF Gala: Where Memes Come to Life!</h1>
-        <h2>7/21/23</h2>
-    </header>
-
-    <section class="description">
-        <p>Welcome to the GIF Gala, where memes take center stage! Dress up as your favorite GIF or meme, and join us
-            for a night filled with laughter, dancing, and unforgettable moments. Get ready to bring the internet to
-            life!</p>
+  <main>
+    <section>
+      <h3>About the GIF Gala</h3>
+      <p>The GIF Gala is a vibrant and festive event where guests dress up as their favorite GIFs or memes.</p>
+      <p>
+        Join us for a night of laughter, creativity, and unforgettable moments as we bring internet culture to life!
+      </p>
     </section>
 
-    <section class="rsvp-form">
-        <h2>RSVP</h2>
-        <form id="rsvpForm">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+    <div id="confirmation-message"></div>
 
-            <label for="attendance">Will you attend?</label>
-            <select id="attendance" name="attendance" required>
-                <option value="" disabled selected>Select an option</option>
-                <option value="yes">Yes, I will be there!</option>
-                <option value="no">Sorry, can't make it.</option>
-            </select>
+    <section>
+      <h3>RSVP</h3>
+      <form id="rsvp-form">
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
 
-            <button type="submit">Submit</button>
-        </form>
+        <label for="attendance">Attendance:</label>
+        <select id="attendance" required>
+          <option value="" disabled selected>Select an option</option>
+          <option value="yes">Yes, I'll be there!</option>
+          <option value="no">Sorry, I can't make it.</option>
+        </select>
 
-        <div id="confirmationMessage" class="hidden">
-            <p>Thank you for RSVPing to the GIF Gala! We can't wait to see you there!</p>
-        </div>
+        <button type="submit">Submit</button>
+      </form>
     </section>
-
+  </main>
 </body>
 
 </html>

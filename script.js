@@ -1,30 +1,24 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('rsvpForm');
-    const confirmationMessage = document.getElementById('confirmationMessage');
+// Get the form element and confirmation message element
+const rsvpForm = document.getElementById('rsvp-form')
+const confirmationMessage = document.getElementById('confirmation-message')
 
-    form.addEventListener('submit', function (event) {
-        event.preventDefault();
+// Add event listener to the form submission
+rsvpForm.addEventListener('submit', (event) => {
+  event.preventDefault() // Prevent form submission
 
-        // Fetch user inputs
-        const email = form.elements.email.value;
-        const attendance = form.elements.attendance.value;
+  // Get the selected attendance value
+  const attendance = document.getElementById('attendance').value
 
-        // Add your logic for form submission and display confirmation message here
-        if (attendance === 'yes') {
-            // Display message for attendees
-            displayConfirmationMessage(`Thank you for RSVPing to the GIF Gala! We can't wait to see you there!`, 'green');
-        } else if (attendance === 'no') {
-            // Display message for non-attendees
-            displayConfirmationMessage(`We're sorry to hear you can't make it. We hope to see you at the next event!`, 'red');
-        }
-    });
-
-    function displayConfirmationMessage(message, backgroundColor) {
-        // Update message text and background color
-        confirmationMessage.innerHTML = `<p>${message}</p>`;
-        confirmationMessage.style.backgroundColor = backgroundColor;
-
-        // Show the confirmation message div
-        confirmationMessage.style.display = 'block';
-    }
-});
+  // Display confirmation message based on attendance selection
+  if (attendance === 'yes') {
+    confirmationMessage.innerHTML = 'Party on! We look forward to seeing you at the GIF Gala! 🎉'
+  } else if (attendance === 'no') {
+    confirmationMessage.innerHTML = `We're sorry to hear you can't make it. We hope to see you at the next event!`
+  }
+  
+  // Show the confirmation message
+  confirmationMessage.style.display = 'block'
+  
+  // Reset the form
+  rsvpForm.reset()
+})
